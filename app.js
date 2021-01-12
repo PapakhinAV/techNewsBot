@@ -18,6 +18,7 @@ async function main() {
   const $ = cheerio.load(twitter);
   const header = [];
   const news = [];
+  const img = [];
   $('a.entry-header > h1').each((i, element) => {
     const title = $(element).text();
     header.push(title);
@@ -26,8 +27,12 @@ async function main() {
     const newsBody = $(element).text();
     news.push(newsBody);
   });
-
-  const allData = header.map((element, i) => [element, news[i]]);
+  $('div.imgPrevWrapper>a').each((i, element) => {
+    const newsImg = $(element).attr('href');
+    img.push(`https://3dnews.ru/${newsImg}`);
+  });
+  // console.log(img);
+  const allData = header.map((element, i) => [element, news[i], img[i]]);
   const newAllDada = allData.slice(0, 15);
   return newAllDada;
 }
