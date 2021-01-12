@@ -1,22 +1,18 @@
 {
-  "name": "parsing-101",
+  "name": "TechBot",
   "version": "1.0.0",
-  "description": "## Введение В этом задании вам предстоит познакомиться с такой концепцией как \"парсинг\" сайтов, или по-умному \"web scraping\".",
+  "description": "## Телеграмм бот для парсинга новостей.",
   "main": "index.js",
   "scripts": {
-    "start": "node scrape.js"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Elbrus-Bootcamp/parsing-101.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "https://github.com/PapakhinAV",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Elbrus-Bootcamp/parsing-101/issues"
-  },
-  "homepage": "https://github.com/Elbrus-Bootcamp/parsing-101#readme",
+  "homepage": "https://github.com/PapakhinAV/techNewsBot#readme",
   "dependencies": {
     "axios": "^0.20.0",
     "cheerio": "^1.0.0-rc.3",
